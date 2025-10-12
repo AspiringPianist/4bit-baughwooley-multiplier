@@ -23,7 +23,8 @@ Here are the VIO and ILA dashboards monitoring the multiplier on the FPGA, along
   </tr>
   <tr>
     <td><img width="700" alt="Timing Summary Report" src="https://github.com/user-attachments/assets/c6d4ace4-3f45-4342-8250-9133e32f13e6" /></td>
-    <td><img width="500" alt="Power Report" src="https://github.com/user-attachments/assets/1d313fcb-1b03-44f4-b7a4-1ea5e1417b72" /></td>
+    <td><img width="500" alt="Power Report Setup (default)" src="https://github.com/user-attachments/assets/1d313fcb-1b03-44f4-b7a4-1ea5e1417b72" /></td>
+    <td><img width="500" alt="Power Report" src="https://github.com/user-attachments/assets/c6d4ace4-3f45-4342-8250-9133e32f13e6" /></td>
   </tr>
 </table>
 
