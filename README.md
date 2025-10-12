@@ -36,6 +36,13 @@ Here are the VIO and ILA dashboards monitoring the multiplier on the FPGA.
 *ILA Waveform showing signal transitions over time:*
 <img width="1091" height="692" alt="ILA Waveform" src="https://github.com/user-attachments/assets/08363e32-8769-46db-a733-21bf46b4c598" />
 
+*Power Analysis (Reports -> Timing -> Report Timing Summary):*
+<img width="1056" height="440" alt="image" src="https://github.com/user-attachments/assets/c6d4ace4-3f45-4342-8250-9133e32f13e6" />
+
+*Timing Analysis Report (Reports -> Power):*
+<img width="654" height="1034" alt="image" src="https://github.com/user-attachments/assets/1d313fcb-1b03-44f4-b7a4-1ea5e1417b72" />
+
+
 ---
 
 ## Detailed Manual Setup Instructions
