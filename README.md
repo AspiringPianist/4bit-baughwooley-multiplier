@@ -8,6 +8,11 @@ This project implements a 4-bit signed Baugh-Wooley multiplier on a Xilinx FPGA 
 
 This guide explains how to manually create and configure the VIO and ILA IP cores required for debugging the multiplier directly on the FPGA.
 
+### How Sources should be setup
+
+<img width="471" height="743" alt="image" src="https://github.com/user-attachments/assets/59361478-0564-4b04-b4c6-d36f8b1296bc" />
+
+
 ### Quick Reference: IP Configuration
 
 | IP Core | Port         | Width | Direction | Purpose                     |
