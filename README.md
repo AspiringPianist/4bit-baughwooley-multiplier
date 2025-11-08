@@ -1,3 +1,56 @@
+# Comparison of Pipelined and Unpipelined Baugh-Wooley Multiplier (Scroll to end of this for VIO/ILA details)
+**Name:** Unnath Chittimalla  
+**Roll Number:** IMT2023620  
+
+## Objective
+To compare the performance of a **pipelined** 4×4 signed Baugh-Wooley multiplier with its **unpipelined** version implemented on a Xilinx Artix-7 FPGA (xc7a35t-cpg236-1). The focus is on **timing performance, logic delay, routing delay, resource usage, and throughput**.
+
+---
+
+## Summary of Results
+
+| Metric | Unpipelined | Pipelined | Improvement |
+|-------|------------|-----------|-------------|
+| Worst-Case Slack | +3.844 ns | +4.002 ns | Slight improvement |
+| Achieved Clock Period | 6.156 ns | 5.998 ns | Faster clock possible |
+| Fmax (Max Frequency) | ~162.4 MHz | ~166.7 MHz | ↑ Increased speed |
+| Logic Delay | **1.473 ns** | **0.704 ns** | **↓ Reduced by ~2×** |
+| Routing Delay | 4.249 ns | 5.036 ns | Slight increase due to added pipeline registers |
+| Logic Depth (Levels) | 5 | **2** | **Significantly reduced** |
+| Latency | 1 cycle | **4 cycles** | Higher latency |
+| Throughput | 1 output/cycle | **1 output/cycle** | Same (but faster clock) |
+| LUT Usage | 1364 | 1370 | ~Same |
+| FF Usage | 2300 | 2353 | Slightly higher due to pipeline registers |
+| Power | 0.081 W | 0.081 W | No meaningful change |
+
+---
+
+## Analysis
+
+### Logic Delay Reduction
+The pipelined design breaks the multiplication logic into multiple stages.  
+This **reduces logic depth from 5 levels to 2**, resulting in:
+- **Lower logic delay (1.47 ns → 0.70 ns)**
+- Higher achievable operating frequency (≈162 MHz → ≈167 MHz)
+
+### Routing Delay
+Routing delay slightly increases due to added pipeline registers, but the overall **critical path still improves** because logic is the dominant factor.
+
+### Latency vs Throughput
+- **Latency increases** (result ready after 4 cycles instead of 1)
+- **Throughput remains 1 result per cycle**, and due to higher Fmax, **overall results per second increase**
+
+---
+
+## Conclusion
+The **pipelined multiplier clearly outperforms** the unpipelined version in speed and timing closure.  
+The key improvement comes from **reduction in logic delay and logic depth**, demonstrating the effectiveness of pipelining in digital design.  
+Resource and power overhead remain **minimal**, making pipelining a beneficial optimization in real hardware.
+
+**Final Verdict:** *Pipelining provides higher performance and throughput with negligible cost.*
+
+
+
 # 4-Bit Baugh-Wooley Multiplier (IMT2023620 Unnath Ch)
 
 This project implements a 4-bit signed Baugh-Wooley multiplier on a Xilinx FPGA (tested on a Basys 3 board) using the Vivado Suite. It includes two top modules: one for on-chip debugging with VIO/ILA, and another for physical interaction using DIP switches and LEDs.
