@@ -1,0 +1,48 @@
+# Vivado Project Files to Ignore
+*.jou
+*.log
+*.str
+*.zip
+*.html
+*.xml
+
+# Top-Level Vivado Generated Directories
+baugh_wooley.cache/
+baugh_wooley.gen/
+baugh_wooley.hw/
+baugh_wooley.ip_user_files/
+baugh_wooley.runs/
+baugh_wooley.sim/
+
+# Optional: Ignore local .xpr (project GUI state) if team uses TCL-based builds
+# baugh_wooley.xpr
+
+# Checkpoints / Implementation outputs
+*.dcp
+*.pb
+*.rpt
+*.bit
+*.bin
+*.mcs
+
+# Debug / ILAs / VIO captured output
+*.ltx
+
+# Vivado Database Garbage
+.xil/
+*.wdb
+
+# OS + Editor noise
+.DS_Store
+*.swp
+*.swo
+*.tmp
+*.backup
+
+# Python virtual environments (if scripts are added later)
+venv/
+__pycache__/
+
+# PDFs generated from README
+README.pdf
+
